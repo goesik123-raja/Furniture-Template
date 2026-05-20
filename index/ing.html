@@ -1,0 +1,33 @@
+<script>
+   /* let a; a = 0; 
+console.log(a); 
+a = "Hello"; 
+console.log(a)*/
+
+
+// const numbers = [1, 2, 3];
+// const copy = [...numbers];
+
+// console.log(copy);      
+
+
+
+let data = [1, 2, 3, 4];
+
+// Using map to transform each item
+let output = data.map((item, ix) => {
+  return `${item}_hello`;
+});
+
+// Custom map implementation (for illustration)
+Array.prototype.myMap = function(callback) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    temp.push(callback(this[i], i, this)); 
+  }
+  return temp;
+};
+
+console.log(output);
+
+</script>
